@@ -1,14 +1,12 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/Vn0I8K1_)
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=21503176&assignment_repo_type=AssignmentRepo)
-# SE_python_project2025
+# SE_python_project202 
 
-🍽️ Restaurant Management Web App
-
-A Full-Stack Restaurant Ordering & Management System
+A backend Restaurant Ordering & Management System
 
  <h1>Project Overview</h1>
 
-The Restaurant Management Web Application is a full-stack system that digitizes restaurant operations. It enables customers to browse meals and place orders, while admins can manage menu items, track orders, and handle table reservations.
+The Restaurant Management backend system that digitizes restaurant operations. It enables customers to browse meals and place orders, while admins can manage menu items, track orders, and handle table reservations.
 
    Why This Project?
 Eliminates manual ordering and billing
@@ -30,7 +28,7 @@ Developers building ordering systems
 - View all menu items
 - Add/remove items 
 - Place orders with auto total
-- Reserve tables (NEW)
+- Reserve tables 
 
 Admin Features
 - Secure admin login
@@ -41,19 +39,7 @@ Admin Features
 System Architecture
 - Backend: Flask (Python)
 - Database: MySQL
-- ORM: SQLAlchemy (optional)
-- Frontend: HTML + CSS + JavaScript
-
-
-Team Members  
-
-| ID       | Name                  | GitHub Username        |
-|----------|-----------------------|-----------------------|
-| 1701186 | Yohannes Zeru          | yoz0816               |
-| 1701218 | Zerubabel Megersa      | barsulamatis          |
-| 1700997 | Samrawit Shewakena     | samrawit-shewakena    |
-| 1701016 | Selam Tsehaye          | selam-ui              |
-
+- ORM: SQLAlchemy (optiona)
 <h1>API Documentation</h1>
 
 this is complete API list including request and response examples. it is just sample
@@ -1598,20 +1584,10 @@ Error Responses:
 - inventory
 - payments
 - sales_reports
+  
 
-
- <u>Development Plan</u>
-
-| Week       | Task                                 |
-| ---------- | -------------------------------------|
-| Week 1 | Finalize project idea & update README    |
-| Week 2 | Build core features (menu, cart, orders) |
-| Week 3 | Add admin features (login, manage menu)  |
-| Week 4 | Test, fix bugs & finalize project        |
-
-How to Run This Project
-1. Install dependencies:
-   pip install flask mysql-connector-python
+<u><b>How to Run This Project</b></u>
+1. Install dependencies
 
 2. Set up the MySQL database:
    - Open MySQL Workbench

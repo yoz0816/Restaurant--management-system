@@ -13,8 +13,6 @@ from models import (
     InventoryLog,
 )
 
-# ---------------- USER ----------------
-
 class UserSchema(ma.SQLAlchemySchema):
     class Meta:
         model = User
@@ -28,8 +26,6 @@ class UserSchema(ma.SQLAlchemySchema):
     created_at = ma.auto_field(dump_only=True)
 
 
-# ---------------- CATEGORY ----------------
-
 class MenuCategorySchema(ma.SQLAlchemySchema):
     class Meta:
         model = MenuCategory
@@ -42,8 +38,6 @@ class MenuCategorySchema(ma.SQLAlchemySchema):
     created_at = ma.auto_field(dump_only=True)
     updated_at = ma.auto_field(dump_only=True)
 
-
-# ---------------- MENU ITEM ----------------
 
 class MenuItemSchema(ma.SQLAlchemySchema):
     class Meta:
@@ -65,7 +59,6 @@ class MenuItemSchema(ma.SQLAlchemySchema):
         return Decimal(value)
 
 
-# ---------------- ORDER ITEM ----------------
 
 class OrderItemSchema(ma.SQLAlchemySchema):
     class Meta:
@@ -88,7 +81,6 @@ class OrderItemSchema(ma.SQLAlchemySchema):
         return float(obj.line_total())
 
 
-# ---------------- ORDER ----------------
 
 class OrderSchema(ma.SQLAlchemySchema):
     class Meta:
@@ -110,7 +102,7 @@ class OrderSchema(ma.SQLAlchemySchema):
         return float(obj.total_price)
 
 
-# ---------------- PAYMENT ----------------
+
 
 class PaymentSchema(ma.SQLAlchemySchema):
     class Meta:
@@ -132,8 +124,6 @@ class PaymentSchema(ma.SQLAlchemySchema):
         return Decimal(value)
 
 
-# ---------------- RESERVATION ----------------
-
 class ReservationSchema(ma.SQLAlchemySchema):
     class Meta:
         model = Reservation
@@ -147,7 +137,6 @@ class ReservationSchema(ma.SQLAlchemySchema):
     created_at = ma.auto_field(dump_only=True)
 
 
-# ---------------- SALES REPORT ----------------
 
 class SalesReportSchema(ma.SQLAlchemySchema):
     class Meta:
@@ -166,7 +155,6 @@ class SalesReportSchema(ma.SQLAlchemySchema):
         return float(obj.total_sales)
 
 
-# ---------------- INVENTORY ----------------
 
 class InventorySchema(ma.SQLAlchemySchema):
     class Meta:
@@ -182,8 +170,6 @@ class InventorySchema(ma.SQLAlchemySchema):
     last_restock_date = ma.auto_field(dump_only=True)
 
 
-# ---------------- INVENTORY LOG ----------------
-
 class InventoryLogSchema(ma.SQLAlchemySchema):
     class Meta:
         model = InventoryLog
@@ -196,10 +182,6 @@ class InventoryLogSchema(ma.SQLAlchemySchema):
     note = ma.auto_field()
     created_at = ma.auto_field(dump_only=True)
 
-
-# =====================
-# SCHEMA INSTANCES (IMPORTANT)
-# =====================
 
 user_schema = UserSchema()
 users_schema = UserSchema(many=True)

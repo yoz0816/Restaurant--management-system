@@ -8,12 +8,13 @@ A backend Restaurant Ordering & Management System
 
 The Restaurant Management backend system that digitizes restaurant operations. It enables customers to browse meals and place orders, while admins can manage menu items, track orders, and handle table reservations.
 
-   Why This Project?
-Eliminates manual ordering and billing
-Reduces human errors
-Provides real-time management
-Helps restaurants digitize workflow
-Useful for learning Flask + MySQL
+   <b>Why This Project?</b>
+
+- Eliminates manual ordering and billing
+- Reduces human errors
+- Provides real-time management
+- Helps restaurants digitize workflow
+- Useful for learning Flask + MySQL
 
   <h1>Who Can Use It?</h1>
 Restaurants & cafés

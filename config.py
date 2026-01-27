@@ -1,9 +1,7 @@
 import os
 from datetime import timedelta
 from dotenv import load_dotenv
-
 load_dotenv()
-
 
 class Config:
     SECRET_KEY = os.getenv("SECRET_KEY", "default_secret_key")
@@ -14,7 +12,6 @@ class Config:
         raise RuntimeError("SQLALCHEMY_DATABASE_URI is not set")
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-
     JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY", "default_jwt_secret")
     JWT_TOKEN_LOCATION = ["headers"]
     JWT_HEADER_NAME = "Authorization"
@@ -24,11 +21,9 @@ class Config:
     JWT_REFRESH_TOKEN_EXPIRES = timedelta(days=30)
     JSON_SORT_KEYS = False
 
-
 class DevelopmentConfig(Config):
     DEBUG = True
-
-
+    
 class ProductionConfig(Config):
     DEBUG = False
     SESSION_COOKIE_SECURE = True

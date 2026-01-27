@@ -4,7 +4,6 @@ from datetime import date, datetime
 import re
 
 EMAIL_REGEX = r"[^@]+@[^@]+\.[^@]+"
-
 ORDER_STATUS = ["pending", "processing", "completed", "cancelled"]
 PAYMENT_STATUS = ["unpaid", "paid", "failed", "refunded"]
 SERVICE_TYPES = ["dine_in", "take_away", "delivery"]

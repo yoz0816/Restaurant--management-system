@@ -10,7 +10,6 @@ from decimal import Decimal
 import random, string
 from sqlalchemy.exc import SQLAlchemyError
 
-
 class AuthService:
 
     @staticmethod
@@ -166,7 +165,6 @@ class MenuCategoryService:
             db.session.rollback()
             return None, error_response(str(e), 500)
 
-
 class MenuService:
 
     @staticmethod
@@ -235,7 +233,6 @@ class MenuService:
         except SQLAlchemyError as e:
             db.session.rollback()
             return None, error_response(str(e), 500)
-
 
 class OrderService:
 
@@ -389,7 +386,7 @@ class PaymentService:
         except SQLAlchemyError as e:
             db.session.rollback()
             return None, error_response(str(e), 500)
-
+        
 class ReservationService:
 
     @staticmethod
@@ -442,7 +439,6 @@ class ReservationService:
             db.session.rollback()
             return None, error_response(str(e), 500)
 
-
 class SalesReportService:
 
     @staticmethod
@@ -494,7 +490,6 @@ class SalesReportService:
         except SQLAlchemyError as e:
             db.session.rollback()
             return None, error_response(str(e), 500)
-
 
 class InventoryService:
 

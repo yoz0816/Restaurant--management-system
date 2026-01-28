@@ -21,10 +21,9 @@ class Config:
     JWT_REFRESH_TOKEN_EXPIRES = timedelta(days=30)
     JSON_SORT_KEYS = False
 
-
 class DevelopmentConfig(Config):
     DEBUG = True
-
+    
 class ProductionConfig(Config):
     DEBUG = False
     SESSION_COOKIE_SECURE = True

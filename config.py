@@ -12,7 +12,6 @@ class Config:
         raise RuntimeError("SQLALCHEMY_DATABASE_URI is not set")
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-
     JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY", "default_jwt_secret")
     JWT_TOKEN_LOCATION = ["headers"]
     JWT_HEADER_NAME = "Authorization"

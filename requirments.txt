@@ -9,4 +9,7 @@ Flask-Marshmallow==0.15.0
 marshmallow-sqlalchemy==1.0.0
 python-dotenv==1.0.1
 Werkzeug==3.0.1
+Flask-Migrate==4.0.7
+alembic==1.13.1
+cryptography>=46.0.4
 

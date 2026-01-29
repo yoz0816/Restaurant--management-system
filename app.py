@@ -2,7 +2,7 @@ import os
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from flask_jwt_extended import JWTManager
-from database.db import db
+from database.db import db,migrate
 from config import Config
 from controllers import api_bp
 from utils.exceptions import AppException
@@ -17,6 +17,7 @@ def create_app():
     CORS(app, supports_credentials=True)
     JWTManager(app)
     db.init_app(app)
+    migrate.init_app(app, db)
 
 
     register_blueprints(app)

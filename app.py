@@ -7,16 +7,20 @@ from config import Config
 from controllers import api_bp
 from utils.exceptions import AppException
 from utils.response import error_response
+from utils.logging import configure_logging
 
 
 def create_app():
     app = Flask(__name__)
+    configure_logging(app)
     app.config.from_object(Config)
     CORS(app, supports_credentials=True)
     JWTManager(app)
     db.init_app(app)
 
+
     register_blueprints(app)
+    register_middlewares(app)
     register_error_handlers(app)
     register_health_check(app)
 
@@ -25,6 +29,10 @@ def create_app():
 def register_blueprints(app):
     app.register_blueprint(api_bp)
 
+def register_middlewares(app):
+    @app.before_request
+    def log_request():
+        app.logger.info(f"{request.method} {request.path}")
 
 def register_error_handlers(app):
     @app.errorhandler(AppException)
@@ -46,9 +54,9 @@ def register_error_handlers(app):
 
     @app.errorhandler(500)
     def server_error(e):
+        app.logger.exception("Unhandled server error")
         return error_response("Internal server error", 500)
-
-
+    
 def register_health_check(app):
     @app.get("/api/health")
     def health():
